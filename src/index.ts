@@ -1,4 +1,5 @@
 import { Configuration, OpenAIApi } from 'openai';
+import { ORG as organization, SK as apiKey } from '../secrets';
 import type { ConfigurationParameters } from 'openai';
 import { createReadStream } from 'fs';
 
@@ -19,6 +20,6 @@ async function bootstrap(conf: ConfigurationParameters): Promise<void> {
 }
 
 void bootstrap({
-  organization: 'org-FEZJSdVbWloO4Abq99Zrr0fd',
-  apiKey: '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',
+  organization,
+  apiKey,
 });
